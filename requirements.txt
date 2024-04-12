@@ -1,0 +1,12 @@
+pillow
+tkcalendar
+pyautogui
+opencv-python
+opencv-contrib-python
+pywhatkit
+SpeechRecognition
+pyttsx3
+googletrans==3.1.0a0
+PyAudio
+disutils
+setuptools
