@@ -3,8 +3,7 @@ import numpy as np
 from PIL import Image  # pillow package
 import os
 
-# xmlpath = "C:\\Users\\prasa\\AppData\\Roaming\\Python\\Python311\\site-packages\\cv2\\data" \
-#           "\\haarcascade_frontalface_default.xml"
+# change the path acording to your haarcascade_frontalface_default.xml file path
 xmlpath = "C:\\Users\\prasa\\AppData\\Roaming\\Python\\Python312\\site-packages\\cv2\\\data\\haarcascade_frontalface_default.xml"
 
 
@@ -56,7 +55,7 @@ def face_sample():  # This function for Generating a sample images
 
 def face_train():  # This function for Training a Model
 
-    path = 'D:\\Angel\\samples'  # Path for samples already taken
+    path = 'samples'  # Path for samples already taken
 
     # Local Binary Patterns Histograms
     recognizer = cv2.face.LBPHFaceRecognizer_create()
@@ -91,7 +90,7 @@ def face_train():  # This function for Training a Model
     recognizer.train(faces, np.array(ids))
 
     # Save the trained model as trainer.yml
-    recognizer.write('D:\\Angel\\trainer\\trainer.yml')
+    recognizer.write('trainer\\trainer.yml')
 
     print("Model trained, Now we can recognize your face.")
 
@@ -100,7 +99,7 @@ def face_match(name='Dhaneshwar'):  # This function for Recognising the face
 
     # Local Binary Patterns Histograms
     recognizer = cv2.face.LBPHFaceRecognizer_create()
-    recognizer.read('D:\\Angel\\trainer\\trainer.yml')  # load trained model
+    recognizer.read('trainer\\trainer.yml')  # load trained model
     cascadePath = xmlpath
     # initializing haar cascade for object detection approach
     faceCascade = cv2.CascadeClassifier(cascadePath)
@@ -167,7 +166,7 @@ def face_match(name='Dhaneshwar'):  # This function for Recognising the face
 def reset_face():
 
     # Set the path of the folder containing the files to delete
-    folder_path = "D:\\Angel\\samples"
+    folder_path = "samples"
 
     # Get a list of all files in the folder
     files = os.listdir(folder_path)
