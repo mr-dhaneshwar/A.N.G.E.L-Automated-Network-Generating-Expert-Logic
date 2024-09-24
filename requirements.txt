@@ -2,6 +2,7 @@ pillow
 tkcalendar
 pyautogui
 opencv-python
+google-generativeai
 opencv-contrib-python
 pywhatkit
 SpeechRecognition
