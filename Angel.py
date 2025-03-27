@@ -82,3 +82,4 @@ def main():
 
 my_window(main)  # creates a window and runs the 'main' function
 sys.exit()  # exits the program after the window is closed
+

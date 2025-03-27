@@ -52,6 +52,7 @@ def speak(audio, img=1):
     try:
 
         x = 1  # get the language
+        # x = 2  # get the language
         if x == 1:
             audio = to_mr(audio)
         elif x == 2:
@@ -60,7 +61,6 @@ def speak(audio, img=1):
             audio = to_hi(audio)
 
         
-        print(('Angel: ' + audio))
 
         print('Angel: ' + audio)
         # if speak_check():
@@ -71,7 +71,7 @@ def speak(audio, img=1):
             #     # Sets the voice to the second option in the list.
             #     engine.setProperty('voice', voices[1].id)
         if 1:
-            engine.setProperty('voice', voices[4].id)
+            engine.setProperty('voice', voices[-1].id)
             engine.setProperty('rate', 195)
             engine.say(audio)
             engine.runAndWait()
@@ -79,6 +79,8 @@ def speak(audio, img=1):
     except Exception as e:
         print('speak problem....\n', e)
 
+speak('hello')
+print(voices)
 
 def takeCommand(l=0):
     global lang
@@ -122,4 +124,4 @@ def takeCommand(l=0):
         print('listen problem......', e)
 
 
-takeCommand()
+# takeCommand()

@@ -9,7 +9,6 @@ from Helptext import *
 
 theme = 'Light'
 
-
 def change_theme():
     global theme
     if theme == 'Light':
@@ -177,7 +176,7 @@ def close():
     my_frame.destroy()
 
 
-location = 'D:\\Angel\\image\\'
+location = 'image\\'
 
 
 def new_frame(main):
@@ -620,7 +619,7 @@ def my_window(main):
     root.configure(bg='White')
     root.resizable(False, False)
     root.title('ANGEL_2.0')
-    logo = PhotoImage(file="D:\\Angel\\image\\logo.png")
+    logo = PhotoImage(file="image\\logo.png")
     root.iconphoto(False, logo)
 
     lang = IntVar()
@@ -637,13 +636,13 @@ def my_window(main):
     start2_png = ImageTk.PhotoImage(resized)
 
     # login page background
-    logbgopen = Image.open('D:\\Angel\\image\\login bg.png')
+    logbgopen = Image.open('image\\login bg.png')
     # resize image
     resized = logbgopen.resize((1200, 700), Image.LANCZOS)
     logbgimg = ImageTk.PhotoImage(resized)
 
     # login page background
-    facebgopen = Image.open('D:\\Angel\\image\\face-id.png')
+    facebgopen = Image.open('image\\face-id.png')
     # resize image
     resized = facebgopen.resize((200, 200), Image.LANCZOS)
     facegbgimg = ImageTk.PhotoImage(resized)
@@ -653,7 +652,7 @@ def my_window(main):
     bglb.place(relwidth=1, relheight=1)
 
     # login page background
-    logohelp = Image.open('D:\\Angel\\image\\help.png')
+    logohelp = Image.open('image\\help.png')
     # resize image
     resized = logohelp.resize((45, 45), Image.LANCZOS)
     help_img = ImageTk.PhotoImage(resized)
@@ -664,7 +663,7 @@ def my_window(main):
     create_tooltip(helpbt, 'Help?')
 
     # login page background
-    logosopen = Image.open('D:\\Angel\\image\\simage.png')
+    logosopen = Image.open('image\\simage.png')
     # resize image
     resized = logosopen.resize((45, 45), Image.LANCZOS)
     setting_img = ImageTk.PhotoImage(resized)
@@ -675,13 +674,13 @@ def my_window(main):
     create_tooltip(settingbt, 'Settings')
 
     # login page background
-    silence_png = Image.open('D:\\Angel\\image\\silence.png')
+    silence_png = Image.open('image\\silence.png')
     # resize image
     resized = silence_png.resize((45, 45), Image.LANCZOS)
     silence_png = ImageTk.PhotoImage(resized)
 
     # login page background
-    sound_png = Image.open('D:\\Angel\\image\\sound.png')
+    sound_png = Image.open('image\\sound.png')
     # resize image
     resized = sound_png.resize((45, 45), Image.LANCZOS)
     sound_png = ImageTk.PhotoImage(resized)
@@ -691,7 +690,7 @@ def my_window(main):
     name_lb = Label(root, text='A\nN\nG\nE\nL', font=('Arial', 50), fg='Blue')
     name_lb.place(x=20, y=70)
 
-    startimg = PhotoImage(file='D:\\Angel\\image\\play.png')
+    startimg = PhotoImage(file='image\\play.png')
 
     start_button = Button(root, image=startimg, cursor='hand2',
                           relief=FLAT, command=lambda: new_frame(main))
@@ -701,7 +700,7 @@ def my_window(main):
 
     # implementing face lock system
 
-    if os.listdir('D:\\Angel\\samples'):
+    if os.listdir('samples'):
         if face_match():
             print('welcome')
         else:

@@ -71,9 +71,9 @@ def speak(audio, img=1):
                 engine.setProperty('voice', voices[4].id)
             else:
                 # Sets the voice to the second option in the list.
-                engine.setProperty('voice', voices[1].id)
+                engine.setProperty('voice', voices[3].id)
 
-            engine.setProperty('rate', 195)
+            engine.setProperty('rate', 205)
             engine.say(audio)
             engine.runAndWait()
 

@@ -1,6 +1,6 @@
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyAZRkCgSxW0YHo8GcGvqRnLBL9Sf8oAC3E")
+genai.configure(api_key="AIzaSyDoYKbfhq-tao8PDPjG2QxLWDDo1im_Q0o")
 
 # Set up the model
 generation_config = {
@@ -30,7 +30,7 @@ safety_settings = [
 ]
 
 def angel(prompt):
-    model = genai.GenerativeModel(model_name="gemini-1.0-pro",
+    model = genai.GenerativeModel(model_name="gemini-2.0-flash",
                                 generation_config=generation_config,
                                 safety_settings=safety_settings)
 
@@ -41,3 +41,5 @@ def angel(prompt):
     message=convo.last.text
     print(message)
     return message
+
+# print(angel("Hello, how are you?"))
